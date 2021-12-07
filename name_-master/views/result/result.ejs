@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../header.ejs %>
+  </head>
+  <body>
+    
+    <div style="text-align: center;">
+      <div> 
+          <h1><span class="badge badge-secondary"><%= name[0].name %></span></h1>          
+      </div>
+
+          <br>
+          <a href="https://google.com" class="ui huge rounded image">
+            <img src="<%= name[0].img %>" width="100%">
+          </a>
+    </br>
+    </br>
+    </br>
+
+      <div>
+        <button type="button" class="btn btn-light" 
+          onclick="location.href = '/home' ">돌아가기</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+

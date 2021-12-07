@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../header.ejs %>
+  </head>
+  <body>
+
+    <div style="text-align: center; margin-left: 33%">
+      <div class="select-name" style="width: 50%; text-align: center;">
+
+        <form class="form" id="name_form" action="/result" method="get"> 
+            <div class="dropdown1" style="float: left; width: 50%">
+              <select class="ui dropdown" id="l_name" onchange="input_name()">
+                <option value="">성을 선택해주세요.</option>
+                <option value="아">아</option>
+                <option value="양">양</option>
+              </select>
+            </div>
+
+            <div class="dropdown2" style="float: right; width: 50%">
+              <select class="ui dropdown" id="f_name" onchange="input_name()">
+                <option value="">이름을 선택해주세요.</option>
+                <option value="이린">이린</option>
+                <option value="진호">진호</option>
+              </select>
+            </div>
+
+            </br>
+            </br>
+            </br>
+
+            <div class="ui big label">
+                선택한 이름
+            </div>
+
+            </br>
+            </br>
+
+            <div class="ui input">
+              <input type="text" name="name" id="name" >
+            </div>
+            
+            <script>
+              function input_name(){
+                var x = document.getElementById("f_name").value;
+                var y = document.getElementById("l_name").value;
+                var z = document.getElementById("name");
+                z.value = y + x;
+              }
+            </script>
+            
+            </br>
+            </br>
+              <button class="ui right labeled icon button" 
+                onclick="location.href = '/result'" type="submit">
+              <i class="right arrow icon"></i>
+              결과 확인하기
+              </button>
+
+        </form> 
+      </div>
+    </div>           
+
+  <script>$('.ui.dropdown').dropdown();</script>
+
+  </body>
+</html>
+
